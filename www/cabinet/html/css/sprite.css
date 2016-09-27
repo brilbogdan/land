@@ -1,0 +1,197 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-add {
+    width: 16px;
+    height: 17px;
+    background-position: -5px -5px;
+}
+
+.sprite-benefits-span {
+    width: 106px;
+    height: 107px;
+    background-position: -31px -5px;
+}
+
+.sprite-code {
+    width: 16px;
+    height: 16px;
+    background-position: -147px -5px;
+}
+
+.sprite-copy {
+    width: 16px;
+    height: 15px;
+    background-position: -173px -5px;
+}
+
+.sprite-edit {
+    width: 12px;
+    height: 14px;
+    background-position: -199px -5px;
+}
+
+.sprite-email {
+    width: 63px;
+    height: 42px;
+    background-position: -199px -29px;
+}
+
+.sprite-email-r {
+    width: 49px;
+    height: 34px;
+    background-position: -147px -81px;
+}
+
+.sprite-email-small {
+    width: 16px;
+    height: 12px;
+    background-position: -221px -5px;
+}
+
+.sprite-ic1 {
+    width: 73px;
+    height: 76px;
+    background-position: -5px -125px;
+}
+
+.sprite-ic2 {
+    width: 64px;
+    height: 58px;
+    background-position: -206px -81px;
+}
+
+.sprite-ic3 {
+    width: 57px;
+    height: 67px;
+    background-position: -88px -149px;
+}
+
+.sprite-ic4 {
+    width: 68px;
+    height: 52px;
+    background-position: -155px -149px;
+}
+
+.sprite-ic5 {
+    width: 48px;
+    height: 71px;
+    background-position: -280px -5px;
+}
+
+.sprite-icq {
+    width: 55px;
+    height: 51px;
+    background-position: -233px -149px;
+}
+
+.sprite-icq-r {
+    width: 55px;
+    height: 51px;
+    background-position: -233px -210px;
+}
+
+.sprite-icq-small {
+    width: 18px;
+    height: 17px;
+    background-position: -280px -86px;
+}
+
+.sprite-infinity {
+    width: 15px;
+    height: 10px;
+    background-position: -247px -5px;
+}
+
+.sprite-list {
+    width: 17px;
+    height: 16px;
+    background-position: -308px -86px;
+}
+
+.sprite-logout {
+    width: 32px;
+    height: 32px;
+    background-position: -5px -271px;
+}
+
+.sprite-pause {
+    width: 9px;
+    height: 14px;
+    background-position: -5px -86px;
+}
+
+.sprite-play {
+    width: 13px;
+    height: 16px;
+    background-position: -308px -112px;
+}
+
+.sprite-qu {
+    width: 10px;
+    height: 16px;
+    background-position: -298px -138px;
+}
+
+.sprite-qu_act {
+    width: 16px;
+    height: 10px;
+    background-position: -298px -164px;
+}
+
+.sprite-separator {
+    width: 3px;
+    height: 66px;
+    background-position: -324px -138px;
+}
+
+.sprite-setting {
+    width: 29px;
+    height: 27px;
+    background-position: -5px -214px;
+}
+
+.sprite-slype {
+    width: 48px;
+    height: 48px;
+    background-position: -155px -214px;
+}
+
+.sprite-slype-r {
+    width: 48px;
+    height: 48px;
+    background-position: -47px -271px;
+}
+
+.sprite-slype-small {
+    width: 16px;
+    height: 17px;
+    background-position: -298px -184px;
+}
+
+.sprite-statistics {
+    width: 14px;
+    height: 14px;
+    background-position: -44px -211px;
+}
+
+.sprite-statistics-large {
+    width: 16px;
+    height: 16px;
+    background-position: -298px -211px;
+}
+
+.sprite-status-active {
+    width: 16px;
+    height: 13px;
+    background-position: -44px -237px;
+}
+
+.sprite-status-noactive {
+    width: 15px;
+    height: 15px;
+    background-position: -70px -237px;
+}

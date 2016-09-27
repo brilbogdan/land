@@ -1,0 +1,289 @@
+/*====================================================*/
+/*================= MODAL =================*/
+/*====================================================*/
+.modal-wrapper{
+    background-image: linear-gradient(180deg, #313030 0%, #252525 100%);
+    width: 728px;
+    //height: 510px;
+    margin: 0 auto;
+    border-width: 2px;
+    border-style: solid;
+    border-color: @orange;
+    border-image: @gradient 20;
+    padding: 29px;
+    color: white;
+    display: none;
+    .main-ttl{
+        width: 55%;
+    }
+    .bl-modal-header{
+        margin-bottom: 40px;
+
+        .el-sprite,
+        .txt{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .txt{
+            font-size: 35px;
+            text-transform: uppercase;
+            margin-left: 15px;
+            font-weight: 700;
+        }
+    }
+
+    .el-subtitle{
+        text-transform: uppercase;
+        font-size: 18px;
+        color: white;
+        font-weight: 700;
+        margin-bottom: 17px;
+    }
+
+    .bl-modal-content{
+        .bl-left,
+        .bl-right{
+            width: 45%;
+        }
+    }
+    .wrapper-select,
+    .wrapper-input{
+        width: 100%;
+        float: left;
+        position: relative;
+        input,
+        select{
+            width: 100%;
+            border: 1px solid #707070;
+            border-radius: 3px;
+            background-color: transparent;
+            height: 48px;
+            line-height: 48px;
+            color: white;
+            text-transform: uppercase;
+            margin-bottom: 17px;
+            padding: 0 10px;
+            font-size: 14px;
+            transition: 0.3s;
+            font-family: 'robotoregular';
+            &.error{
+                border-color: #B71C1C;
+            }
+        }
+        label{
+            width: 0;
+            transition: 2s;
+            &.error{
+                background-color: #F44336;
+                position: absolute;
+                top: 0;
+                border-radius: 3px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                animation-name: backLabel;
+                animation-duration: 0.5s;
+                animation-timing-function: ease;
+                animation-iteration-count: 1;
+                animation-direction: normal;
+                animation-play-state: running;
+                animation-fill-mode: forwards;
+                justify-content: center;
+            }
+            &.valid{
+                animation-name: backLabelValid;
+                animation-duration: 0.5s;
+                animation-timing-function: ease;
+                animation-iteration-count: 1;
+                animation-direction: normal;
+                animation-play-state: running;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+    .wrapper-select{
+        margin-bottom: 17px;
+    }
+    .wrapper-checkbox{
+        float: left;
+        margin-bottom: 27px;
+        position: relative;
+        input{
+            display: inline-block;
+            position: absolute;
+            top:-99999px;
+        }
+        label{
+            color: white;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 400;
+            cursor: pointer;
+            &.label-check{
+                span{
+                    width: 16px;
+                    height: 16px;
+                    border: 1px solid #707070;
+                    border-radius: 3px;
+                    display: inline-block;
+                    vertical-align: -2px;
+                    margin-right: 5px;
+                }
+            }
+
+            &.error{
+                position: absolute;
+                top: 0;
+                background-color: #F44336;
+                border-radius: 3px;
+                font-size: 16px;
+                text-transform: none;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                animation-name: checkLabel;
+                animation-duration: 0.5s;
+                animation-timing-function: ease;
+                animation-iteration-count: 1;
+                animation-direction: normal;
+                animation-play-state: running;
+                animation-fill-mode: forwards;
+                justify-content: center;
+            }
+            &.valid{
+                animation-name: checkLabelValid;
+                animation-duration: 0.5s;
+                animation-timing-function: ease;
+                animation-iteration-count: 1;
+                animation-direction: normal;
+                animation-play-state: running;
+                animation-fill-mode: forwards;
+            }
+            &.active{
+                span{
+                    background: @gradient;
+                    background-color: #F44336;
+                }
+            }
+        }
+
+        .el-link-check{
+            color: white;
+            text-decoration: underline;
+        }
+    }
+    .wrapper-captcha{
+        float: left;
+        .txt{
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 9px;
+        }
+        .wrapper-input{
+            width: 50%;
+            float: right;
+        }
+    }
+    .wrapper-btn{
+        float: left;
+        width: 100%;
+        margin-top: 15px;
+        .btn-reg{
+            width: 217px;
+            height: 49px;
+            border: none;
+            cursor: pointer;
+            margin: 0 auto;
+            float: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+    .jq-selectbox__select{
+        height: 48px;
+        padding: 15px 8px 11px;
+        border: 1px solid #707070;
+        font-size: 14px;
+        color: white;
+        text-align: left;
+        text-transform: uppercase;
+        border-radius: 3px;
+    }
+    .jq-selectbox__trigger-arrow{
+        top: 20px;
+        border-top: 5px solid white;
+    }
+    .jq-selectbox__dropdown{
+        background: black;
+        border: 1px solid #707070;
+        margin: -1px 0 0;
+        li{
+            padding: 8px 16px;
+            text-transform: uppercase;
+            color: white;
+        }
+    }
+    .jq-selectbox:hover {
+        .jq-selectbox__trigger-arrow{
+            border-top: 5px solid white;
+        }
+    }
+}
+@keyframes backLabel {
+    from{
+        width: 0;
+        display: none;
+        opacity: 0;
+        left: -950px;
+    }
+    to{
+        width: 100%;
+        display: block;
+        opacity: 1;
+        left: -350px;
+    }
+}
+@keyframes backLabelValid {
+    from{
+        width: 100%;
+        display: block;
+        opacity: 1;
+        left: -350px;
+    }
+    to{
+        width: 0;
+        display: none;
+        opacity: 0;
+        left: -950px;
+    }
+}
+@keyframes checkLabel {
+    from{
+        width: 0;
+        display: none;
+        opacity: 0;
+        right: -950px;
+    }
+    to{
+        width: 100%;
+        display: block;
+        opacity: 1;
+        right: -350px;
+    }
+}
+@keyframes checkLabelValid {
+    from{
+        width: 100%;
+        display: block;
+        opacity: 1;
+        right: -350px;
+    }
+    to{
+        width: 0%;
+        display: none;
+        opacity: 0;
+        right: -950px;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>svg</title>
+</head>
+<style>
+    svg{
+        width: 200px;
+    }
+    path{
+        stroke-width: 2;
+        stroke: orange;
+    }
+    #bottom{
+        animation: svg 5s infinite;
+    }
+    @keyframes svg {
+        from{
+            height: 0;
+        }
+        to{
+            height: 100%;
+        }
+    }
+</style>
+<body>
+    <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 245.5 235" enable-background="new 0 0 245.5 235" xml:space="preserve">
+    <polygon fill="#0D0F0F" points="229.1,10 3,10 3,11.5 115.3,11.5 115.3,222.4 116.7,222.4 116.7,11.5 229.1,11.5 "/>
+    </svg>
+     <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 245.5 235" enable-background="new 0 0 245.5 235" xml:space="preserve">
+         <path id="top" d="m0,0 l0,0"> </path>
+         <path id="bottom" d="m120,0 l0,0"></path>
+         <animate xlink:href="#bottom"
+            attributeName="d"
+            attributeType="XML"
+            from="m120,0 l0,0"
+                to="m120,0 l0,200"
+                  begin="1.5s"
+            dur="3s"
+            fill="freeze" />
+         <animate xlink:href="#top"
+            attributeName="d"
+            attributeType="XML"
+            from="m0,0 l0,0"
+                to="m0,0 l300,0"
+            dur="3s"
+            fill="freeze" />
+    </svg>
+</body>
+</html>

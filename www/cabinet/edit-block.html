@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>#198 - Редактирование блока</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Exo+2:400,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="html/css/style.css" rel="stylesheet" type="text/css">
+    <link href="html/css/jquery.formstyler.css" rel="stylesheet" type="text/css">
+    
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->		
+
+</head>
+
+<body>
+    <div id="wrapper" class="inner">
+        
+        <div rel="main">
+        
+            <header>
+                <div class="cent clearfix">
+                    <div class="logo"><a href="#"><img src="html/images/logo-small.png" alt=""></a></div>
+                    <div class="user-panel">
+                        <div class="block ">
+                            <p class="title">Аккаунт</p>
+                            <p class="e-mail">alex@mail.ru</p>
+                        </div>
+                        <div class="block">
+                            <p class="title">Баланс</p>
+                            <p class="money">44 000 rur</p>
+                        </div>
+                        <div class="block"><a href="#" class="logout"></a></div>
+                    </div>
+                </div><!-- cent -->
+                
+                <nav class="menu">
+                   <div class="cent clearfix">
+                        <ul>
+                            <li><a href="#" class="active">Сайты</a></li>             
+                            <li><a href="#">Статистика</a></li>            
+                            <li><a href="#">Выплаты</a></li>
+                        </ul>
+                        <div class="settings"><a href="#"></a></div>
+                    </div>
+                </nav>
+                
+                <nav class="menu-child">
+                   <div class="cent clearfix">
+                        <ul>
+                            <li><a href="#">Сайты</a></li>             
+                            <li><a href="#" class="active">Блоки</a></li>            
+                        </ul>
+                        
+                        <div class="title">Редактирование блока</div>
+                        
+                    </div> 
+                </nav>
+            </header><!-- header -->
+            
+            
+            <section class="content cent">
+                
+                <div class="edit-form w845 clearfix">
+                    <form action="#">
+                       
+                        <div class="lineinput clearfix bot-sep">
+                            <div class="titl">Статус</div>
+                            <div class="input">
+                                <select class="w365">
+                                    <option>Активные</option>
+                                    <option>Не Активные</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="lineinput clearfix bot-sep color-bg">
+                            <div class="titl">Название</div>
+                            <div class="input"><input type="text" value="Site1_1" class="inp large"></div>
+                        </div>
+                        
+                        
+                        <div class="group-box">
+                            
+                            <div class="group-title">Настройки блока</div>
+                            
+                            <div class="lineinput clearfix bg-none">
+                                <div class="titl">Количество тизеров по горизонтали</div>
+                                <div class="input"><input type="text" value="2" class="inp large"></div>
+                            </div>
+
+                            <div class="lineinput clearfix">
+                                <div class="titl">Количество тизеров по вертикали</div>
+                                <div class="input"><input type="text" value="1" class="inp large"></div>
+                            </div>
+
+                            <div class="lineinput clearfix">
+                                <div class="titl">Фон блока</div>
+                                <div class="input f0">
+                                    <div class="inline-block middle color-bg">
+                                        <div class="prettyprint">
+                                            <input type="text" class="color-bg-inp" value="fe9810">
+                                        </div>
+                                    </div>
+                                    <div class="inline-block middle check-box"><input type="checkbox" id="check1"><label for="check1">Прозрачный</label></div>
+                                </div>
+                            </div>
+
+                            <div class="lineinput clearfix">
+                                <div class="titl">Рамка вокруг блока</div>
+                                <div class="input f0">
+                                    <div class="inline-block middle color-bg">
+                                        <div class="prettyprint">
+                                            <input type="text" class="color-bg-inp" value="fe9810">
+                                        </div>
+                                    </div>
+
+                                    <div class="inline-block middle left12 ot">
+                                        <select class="w140">
+                                            <option>Сплошная</option>
+                                            <option>Пунктирная</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="inline-block middle left12"><input type="text" value="1" class="inp large w62 align-center"></div>
+
+                                    <div class="inline-block middle left8 f19">px</div>
+
+                                </div>
+                            </div>
+
+                            <div class="lineinput clearfix">
+                                <div class="titl">Закругление рамки вокруг блока</div>
+                                <div class="input"><input type="text" value="0" class="inp large"></div>
+                            </div>
+
+                            <div class="lineinput clearfix">
+                                <div class="titl">Ширина блока</div>
+                                <div class="input f0">
+                                    <div class="inline-block middle"><input type="text" value="100" class="inp large w140"></div>
+                                    <div class="inline-block middle left12">
+                                    <input type="radio" id="rad11" name="rad011"><label for="rad11" class="f19 inline-block middle left8">%</label>
+                                    </div>
+                                    <div class="inline-block middle left18">
+                                    <input type="radio" id="rad12" name="rad011"><label for="rad12" class="f19 inline-block middle left8">px</label>
+                                    </div>
+                                </div>
+                            </div>                           
+
+                        </div><!-- group-box -->
+                        
+                        
+                        
+                        
+                        <div class="group-box">
+                            
+                            <div class="group-title">Тизер</div>
+                            
+                            <div class="lineinput clearfix bg-none">
+                                <div class="titl">Отступ между тизерами</div>
+                                <div class="input"><input type="text" value="2" class="inp large"></div>
+                            </div>
+
+                            <div class="lineinput clearfix">
+                                <div class="titl">Отступ между тизерами</div>
+                                <div class="input"><input type="text" value="2" class="inp large"></div>
+                            </div>
+
+                            <div class="lineinput clearfix">
+                                <div class="titl">Рамка вокруг тизера</div>
+                                <div class="input f0">
+                                    <div class="inline-block middle color-bg">
+                                        <div class="prettyprint">
+                                            <input type="text" class="color-bg-inp" value="fe9810">
+                                        </div>
+                                    </div>
+
+                                    <div class="inline-block middle left12 ot">
+                                        <select class="w140">
+                                            <option>Сплошная</option>
+                                            <option>Пунктирная</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="inline-block middle left12"><input type="text" value="1" class="inp large w62 align-center"></div>
+
+                                    <div class="inline-block middle left8 f19">px</div>
+
+                                </div>
+                            </div>
+
+                            <div class="lineinput clearfix">
+                                <div class="titl">Закругление рамки вокруг тизера</div>
+                                <div class="input"><input type="text" value="0" class="inp large"></div>
+                            </div>
+                            
+                            <div class="lineinput clearfix">
+                                <div class="titl">Цвет фона тизера до наведения</div>
+                                <div class="input f0">
+                                    <div class="inline-block middle color-bg">
+                                        <div class="prettyprint">
+                                            <input type="text" class="color-bg-inp" value="fe9810">
+                                        </div>
+                                    </div>
+                                    <div class="inline-block middle check-box"><input type="checkbox" id="check1"><label for="check1">Прозрачный</label></div>
+                                </div>
+                            </div>
+                            
+                            <div class="lineinput clearfix">
+                                <div class="titl">Цвет фона тизера после наведения</div>
+                                <div class="input f0">
+                                    <div class="inline-block middle color-bg">
+                                        <div class="prettyprint">
+                                            <input type="text" class="color-bg-inp" value="fe9810">
+                                        </div>
+                                    </div>
+                                    <div class="inline-block middle check-box"><input type="checkbox" id="check1"><label for="check1">Прозрачный</label></div>
+                                </div>
+                            </div>
+                            
+                            <div class="lineinput clearfix">
+                                <div class="titl">Размеры изображения</div>
+                                <div class="input f0">
+                                    <div class="inline-block middle"><input type="text" value="200" class="inp large w175"></div>
+                                    <div class="inline-block middle f15 separ">х</div>
+                                    <div class="inline-block middle"><input type="text" value="200" class="inp large w175"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="lineinput clearfix">
+                                <div class="titl">Рамка вокруг изображения</div>
+                                <div class="input f0">
+                                    <div class="inline-block middle color-bg">
+                                        <div class="prettyprint">
+                                            <input type="text" class="color-bg-inp" value="fe9810">
+                                        </div>
+                                    </div>
+
+                                    <div class="inline-block middle left12 ot">
+                                        <select class="w140">
+                                            <option>Сплошная</option>
+                                            <option>Пунктирная</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="inline-block middle left12"><input type="text" value="1" class="inp large w62 align-center"></div>
+
+                                    <div class="inline-block middle left8 f19">px</div>
+
+                                </div>
+                            </div>
+                            
+                            <div class="lineinput clearfix">
+                                <div class="titl">Закругление рамки вокруг<br> изображения</div>
+                                <div class="input"><input type="text" value="0" class="inp large" style="margin-top: 15px;"></div>
+                            </div>
+                            
+                            <div class="lineinput clearfix">
+                                <div class="titl">Отступ вокруг изображения</div>
+                                <div class="input"><input type="text" value="0" class="inp large"></div>
+                            </div>
+                            
+                            <div class="lineinput clearfix">
+                                <div class="titl">Расположение заголовка</div> 
+                                <div class="input">
+                                    <select class="w365 align-center"> 
+                                        <option>Под изображением</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="lineinput clearfix">
+                                <div class="titl">Шрифт заголовка</div>
+                                <div class="input f0">
+                                    
+                                    <div class="inline-block middle">
+                                        <select class="w157 align-center"> 
+                                            <option>Arial</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="inline-block middle left12"><input type="text" value="1" class="inp large w62 align-center"></div>
+
+                                    <div class="inline-block middle left8 f19">px</div>
+                                    
+                                    
+                                    
+                                    <div class="inline-block middle color-bg left18">
+                                        <div class="prettyprint">
+                                            <input type="text" class="color-bg-inp" value="fe9810">
+                                        </div>
+                                    </div>
+                                    
+                                    <ul class="font-check">
+                                        <li><input type="checkbox" id="ch112"><label for="ch112" class="inline-block middle italic">курсив</label></li>
+                                        <li><input type="checkbox" id="ch113"><label for="ch113" class="inline-block middle strong">полужирный</label></li>
+                                        <li><input type="checkbox" id="ch114"><label for="ch114" class="inline-block middle underline">подчеркивание</label></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="lineinput clearfix">
+                                <div class="titl">Шрифт описания</div>
+                                <div class="input f0">
+                                    
+                                    <div class="inline-block middle">
+                                        <select class="w157 align-center"> 
+                                            <option>Arial</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="inline-block middle left12"><input type="text" value="1" class="inp large w62 align-center"></div>
+
+                                    <div class="inline-block middle left8 f19">px</div>
+                                    
+                                    <div class="inline-block middle color-bg left18">
+                                        <div class="prettyprint">
+                                            <input type="text" class="color-bg-inp" value="fe9810">
+                                        </div>
+                                    </div>
+                                    
+                                    <ul class="font-check">
+                                        <li><input type="checkbox" id="ch112"><label for="ch112" class="inline-block middle italic">курсив</label></li>
+                                        <li><input type="checkbox" id="ch113"><label for="ch113" class="inline-block middle strong">полужирный</label></li>
+                                        <li><input type="checkbox" id="ch114"><label for="ch114" class="inline-block middle underline">подчеркивание</label></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            
+
+                        
+                        </div><!-- group-box -->
+                        
+                        
+                        
+                        
+                        <div class="lineinput clearfix butt">
+                            <div class="input"><button class="btn">Сохранить</button></div>
+                        </div>
+                    </form>
+                </div><!-- personal-data -->
+                
+                
+                <div class="tizer-list">
+                    <ul>
+                        <li>
+                            <img src="html/images/pic2.jpg" alt="">
+                            <h5>Заголовок Заголовок</h5>
+                            <p>Описание описание Описание описание Описание описание Описание</p>
+                        </li>
+                        <li>
+                            <img src="html/images/pic2.jpg" alt="">
+                            <h5>Заголовок Заголовок</h5>
+                            <p>Описание описание Описание описание Описание описание Описание</p>
+                        </li>
+                    </ul>
+                </div>
+                
+            </section><!-- content -->
+        
+        
+        </div><!-- main -->
+        
+        <footer>
+            <div class="cent clearfix">
+                <div class="link">
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Соглашение</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="payment">
+                    <div class="left"><img src="html/images/wm.png" alt=""></div>
+                    <div class="left"><img src="html/images/wm.png" alt=""></div>
+                </div>
+                
+                <div class="copyr">Etarg.ru 2015. All rights reserved.</div>
+            </div><!-- cent -->
+        </footer>     
+        
+
+    </div><!-- wrapper -->
+
+        <!-- jQuery/jQueryUI (hosted) -->
+		<script type="text/javascript" src="html/js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="html/js/jquery-migrate-1.2.1.min.js"></script>
+        
+		<script type="text/javascript" src="html/js/jquery-ui.js"></script>
+		<link href="html/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+
+		<!-- Markdown parser -->
+		<script type="text/javascript" src="html/js/Markdown.Converter.min.js"></script>
+
+		<!-- Prettyprint -->
+		<link href="html/css/loader/prettify.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="html/js/prettify.js"></script>
+
+		<!-- Plugin -->
+		<script type="text/javascript" src="html/js/jquery.colorpicker.js"></script> 
+		<link href="html/css/jquery.colorpicker.css" rel="stylesheet" type="text/css">
+
+		<!-- Plugin extensions -->
+		<script type="text/javascript" src="html/js/i18n/jquery.ui.colorpicker-nl.js"></script>  
+		<script type="text/javascript" src="html/js/parts/jquery.ui.colorpicker-rgbslider.js"></script>
+		<script type="text/javascript" src="html/js/parts/jquery.ui.colorpicker-memory.js"></script>
+       
+       
+        <script type="text/javascript" src="html/js/jquery.formstyler.js"></script>
+        <script type="text/javascript" src="html/js/main.js"></script>
+    
+        <script class="prettyprint">
+            $(function() {
+                $('.color-bg-inp').colorpicker({
+                    parts:	['hex', 'map', 'bar',  'footer'],
+                    showOn:			'both',
+                    buttonColorize: true,
+                    layout: {
+                        hex:		[0, 0, 2, 1],
+                        preview:	[2, 0, 1, 1],
+                        map:		[0, 1, 2, 1],	// Left, Top, Width, Height (in table cells).
+                        bar:		[2, 1, 1, 1]                                            
+                    }
+                });
+            });
+        </script>
+
+    
+</body>
+</html>
