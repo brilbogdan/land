@@ -1980,6 +1980,9 @@ section {
   height: 49%;
   width: 12%;
 }
+.section-partners .el-area.el-area-small.flr {
+  float: right;
+}
 .section-partners .el-area.el-area-middle {
   height: 23%;
   width: 71%;
@@ -3974,6 +3977,13 @@ section {
   .section-contacts .bl-wrapper-link .bl-center {
     display: none;
   }
+  .section-contacts .bl-wrapper-link .el-link .txt--type-2 {
+    float: left;
+    margin-left: 3px;
+  }
+  .section-contacts .bl-wrapper-link .el-webmoney {
+    float: left;
+  }
   .section-contacts .bl-menu-bottom {
     display: none;
   }
@@ -4015,7 +4025,7 @@ section {
     display: none !important;
   }
 }
-@media (min-width: 400px) and (max-width: 1024px) {
+@media (min-width: 400px) and (max-width: 768px) {
   .el-logo img {
     margin: 0 auto;
   }
