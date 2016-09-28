@@ -244,6 +244,9 @@
     }
 }
 @media (max-width: 1025px){
+    label.error{
+        display: none !important;
+    }
     .animated {
         /*CSS transitions*/
         -o-transition-property: none !important;
@@ -305,17 +308,18 @@
             }
         }
     }
+
     .goBack{
         border-radius: 100%;
     }
     .fixed-block{
-        display: block !important;
-        top: auto !important;
+        display: block;
         right: auto;
         left: auto;
+        top: auto;
+        height: auto;
         z-index: 45;
-        height: 119px !important;
-        width: 100% !important;
+        width: 100%;
         background-color: transparent;
         position: relative;
         float: left;
@@ -323,6 +327,10 @@
         clear: both;
         .fixed-link-wrapper{
             width: 100%;
+        }
+        &.scroll{
+            top: auto;
+            height: auto;
         }
         &:before{
             display: none;
@@ -373,10 +381,11 @@
     .fix-content{
         background: #333;
         position: fixed;
-        left:0;
+        top: 0;
+        left: -268px;
         //z-index: 44;
         width: 266px;
-        transition: 1s;
+        transition: 0.2s;
         overflow: scroll;
         &.onblock{
             left: 0;
@@ -1004,6 +1013,12 @@
             .txt{
                 font-size: 18px;
             }
+            .el-sprite{
+                width: 42px;
+                svg{
+                    width: 83%;
+                }
+            }
         }
         .el-subtitle{
             font-size: 16px;
@@ -1035,11 +1050,9 @@
             }
         }
     }
-    .error{
-        display: none !important;
-    }
+
 }
-@media (min-width: 400px) and (max-width: 768px){
+@media (min-width: 400px) and (max-width: 767px){
     .el-logo {
         img{
             margin: 0 auto;
@@ -1057,6 +1070,23 @@
     .section-know {
         .el-accordion__head{
             font-size: 15px;
+        }
+    }
+    .modal-wrapper {
+        .wrapper-btn {
+            .btn-reg{
+                width: 100%;
+            }
+        }
+        .wrapper-checkbox {
+            .el-link-check{
+                margin-left: 24px;
+            }
+        }
+        .bl-modal-header{
+            .el-sprite{
+                display: none;
+            }
         }
     }
 }

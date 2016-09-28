@@ -12,29 +12,12 @@
     <link rel="stylesheet" href="assets/lib/countdown/jquery.countdown.css">
     <link rel="stylesheet" href="css/style_main.css">
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 <style>
-
-    .uil-circle-css {
-        background: none;
-        overflow: hidden;
-        position: relative;
-        width: 100px;
-        height: 100px;
-        border-radius: 100%;
-        display: inline-block;
-        vertical-align: middle;
-        animation-name: intro;
-        animation-duration: 2s;
-        animation-direction:alternate;
-    }
-    .uil-circle-css svg{
-        margin: 0 auto;
-    }
-    .wrapper-preloader{
+    .wrapper-preloader {
         position: fixed;
         height: 100%;
         width: 100%;
@@ -42,71 +25,159 @@
         z-index: 55;
         text-align: center;
     }
-    .wrapper-preloader:before{
-        content: '';
-        display: inline-block;
-        height: 100%;
-        width: 0;
-        vertical-align: middle;
 
+    .ring {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: solid 0;
+        border-color: #ff6d00 transparent;
+        border-width: 0.25em 0.25em 0 0;
+        border-radius: 50%;
+        -webkit-animation: r 0s linear infinite;
+        animation: r 0s linear infinite;
     }
-    @keyframes intro{
-        from{
-            opacity: 0;
+
+    .ring:nth-child(1) {
+        margin: -2.5em;
+        width: 5em;
+        height: 5em;
+        -webkit-animation-duration: 0.7s;
+        animation-duration: 0.7s;
+    }
+
+    .ring:nth-child(2) {
+        margin: -4em;
+        width: 8em;
+        height: 8em;
+        -webkit-animation-duration: 0.7875s;
+        animation-duration: 0.7875s;
+    }
+
+    .ring:nth-child(3) {
+        margin: -5.5em;
+        width: 11em;
+        height: 11em;
+        -webkit-animation-duration: 0.9s;
+        animation-duration: 0.9s;
+    }
+
+    .ring:nth-child(4) {
+        margin: -7em;
+        width: 14em;
+        height: 14em;
+        -webkit-animation-duration: 1.05s;
+        animation-duration: 1.05s;
+    }
+
+    .ring:nth-child(5) {
+        margin: -8.5em;
+        width: 17em;
+        height: 17em;
+        -webkit-animation-duration: 1.26s;
+        animation-duration: 1.26s;
+    }
+
+    .ring:nth-child(6) {
+        margin: -10em;
+        width: 20em;
+        height: 20em;
+        -webkit-animation-duration: 1.575s;
+        animation-duration: 1.575s;
+    }
+
+    .ring:nth-child(7) {
+        margin: -11.5em;
+        width: 23em;
+        height: 23em;
+        -webkit-animation-duration: 2.1s;
+        animation-duration: 2.1s;
+    }
+
+    .ring:nth-child(8) {
+        margin: -13em;
+        width: 26em;
+        height: 26em;
+        -webkit-animation-duration: 3.15s;
+        animation-duration: 3.15s;
+    }
+
+    .ring:nth-child(9) {
+        margin: -14.5em;
+        width: 29em;
+        height: 29em;
+        -webkit-animation-duration: 6.3s;
+        animation-duration: 6.3s;
+    }
+
+    @-webkit-keyframes r {
+        to {
+            -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
         }
-        to{
-            opacity: 1;
+    }
+
+    @keyframes r {
+        to {
+            -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
         }
     }
 </style>
 <body class="master">
 <div class="wrapper-preloader">
-    <div class='uil-circle-css'>
-        <svg width="88" height="88" viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
-            <g fill="none" fill-rule="evenodd" stroke-width="2">
-                <circle cx="44" cy="44" r="1">
-                    <animate attributeName="r"
-                             begin="0s" dur="1.8s"
-                             values="1; 20"
-                             calcMode="spline"
-                             keyTimes="0; 1"
-                             keySplines="0.165, 0.84, 0.44, 1"
-                             repeatCount="indefinite" />
-                    <animate attributeName="stroke-opacity"
-                             begin="0s" dur="1.8s"
-                             values="1; 0"
-                             calcMode="spline"
-                             keyTimes="0; 1"
-                             keySplines="0.3, 0.61, 0.355, 1"
-                             repeatCount="indefinite" />
-                </circle>
-                <circle cx="44" cy="44" r="1">
-                    <animate attributeName="r"
-                             begin="-0.9s" dur="1.8s"
-                             values="1; 20"
-                             calcMode="spline"
-                             keyTimes="0; 1"
-                             keySplines="0.165, 0.84, 0.44, 1"
-                             repeatCount="indefinite" />
-                    <animate attributeName="stroke-opacity"
-                             begin="-0.9s" dur="1.8s"
-                             values="1; 0"
-                             calcMode="spline"
-                             keyTimes="0; 1"
-                             keySplines="0.3, 0.61, 0.355, 1"
-                             repeatCount="indefinite" />
-                </circle>
-            </g>
-        </svg>
-    </div>
+    <!--<div class='uil-circle-css'>-->
+    <!--<svg width="88" height="88" viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg" stroke="#fff">-->
+    <!--<g fill="none" fill-rule="evenodd" stroke-width="2">-->
+    <!--<circle cx="44" cy="44" r="1">-->
+    <!--<animate attributeName="r"-->
+    <!--begin="0s" dur="1.8s"-->
+    <!--values="1; 20"-->
+    <!--calcMode="spline"-->
+    <!--keyTimes="0; 1"-->
+    <!--keySplines="0.165, 0.84, 0.44, 1"-->
+    <!--repeatCount="indefinite" />-->
+    <!--<animate attributeName="stroke-opacity"-->
+    <!--begin="0s" dur="1.8s"-->
+    <!--values="1; 0"-->
+    <!--calcMode="spline"-->
+    <!--keyTimes="0; 1"-->
+    <!--keySplines="0.3, 0.61, 0.355, 1"-->
+    <!--repeatCount="indefinite" />-->
+    <!--</circle>-->
+    <!--<circle cx="44" cy="44" r="1">-->
+    <!--<animate attributeName="r"-->
+    <!--begin="-0.9s" dur="1.8s"-->
+    <!--values="1; 20"-->
+    <!--calcMode="spline"-->
+    <!--keyTimes="0; 1"-->
+    <!--keySplines="0.165, 0.84, 0.44, 1"-->
+    <!--repeatCount="indefinite" />-->
+    <!--<animate attributeName="stroke-opacity"-->
+    <!--begin="-0.9s" dur="1.8s"-->
+    <!--values="1; 0"-->
+    <!--calcMode="spline"-->
+    <!--keyTimes="0; 1"-->
+    <!--keySplines="0.3, 0.61, 0.355, 1"-->
+    <!--repeatCount="indefinite" />-->
+    <!--</circle>-->
+    <!--</g>-->
+    <!--</svg>-->
+    <!--</div>-->
+    <div class='ring'></div>
+    <div class='ring'></div>
+    <div class='ring'></div>
+    <div class='ring'></div>
+    <div class='ring'></div>
+    <div class='ring'></div>
+    <div class='ring'></div>
+    <div class='ring'></div>
+    <div class='ring'></div>
 </div>
 
 <!---------------------------ASIDE MAIN-MENU--------------------------------------------------------------------------->
 <div class="wrapper">
 
-    <div class="fix-mobile">
-
-    </div>
     <div class="fix-content" id="fix-menu">
 
         <div class="fixed-block">
@@ -141,7 +212,7 @@
                     <li>
                         <a href="#home" data-menuanchor="home">
                         <span class="el-sprite">
-                            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
 	                                viewBox="0 0 43.5 43.5" enable-background="new 0 0 43.5 43.5" xml:space="preserve">
                                     <g>
                                         <path fill="white" d="M21.7,0C9.8,0,0,9.7,0,21.7s9.7,21.7,21.7,21.7s21.7-9.7,21.7-21.7S33.7,0,21.7,0z M21.7,42
@@ -167,7 +238,7 @@
                     <li class="link-grey">
                         <a href="#about" data-menuanchor="about">
                         <span class="el-sprite">
-                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                            <svg  version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                  viewBox="0 0 43.9 43.9" enable-background="new 0 0 43.9 43.9" xml:space="preserve">
                                 <path fill="white" d="M43.9,40.8l-5.2-5c3-3.6,4.8-8.2,4.8-13.3c0-11.6-9.8-21.1-21.8-21.1S0,10.9,0,22.5s9.8,21.1,21.8,21.1
                                     c5.2,0,10-1.8,13.8-4.7l5.2,5L43.9,40.8z M21.7,42.2c-11.2,0-20.4-8.9-20.4-19.7S10.5,2.7,21.7,2.7s20.4,8.9,20.4,19.7
@@ -186,7 +257,7 @@
                     <li>
                         <a href="#advantages" data-menuanchor="advantages">
                         <span class="el-sprite">
-                            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
 	                             viewBox="0 0 43.5 43.5" enable-background="new 0 0 43.5 43.5" xml:space="preserve">
                                 <g>
                                     <path fill="white" d="M21.7,0.4C10,0.4,0.4,10,0.4,21.7S10,43.1,21.7,43.1s21.3-9.6,21.3-21.3S33.5,0.4,21.7,0.4z M21.7,41.6
@@ -208,7 +279,7 @@
                     <li class="link-grey">
                         <a href="#partner" data-menuanchor="partner">
                         <span class="el-sprite">
-                            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
 	                             viewBox="0 0 43.5 44.9" enable-background="new 0 0 43.5 44.9" xml:space="preserve">
                                 <g>
                                     <path fill="white" d="M21.7,0.8c-12,0-21.7,9.7-21.7,21.7s9.7,21.7,21.7,21.7s21.7-9.7,21.7-21.7S33.7,0.8,21.7,0.8z M21.7,42.7
@@ -241,7 +312,7 @@
                     <li>
                         <a href="#know" data-menuanchor="know">
                         <span class="el-sprite">
-                            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                                      viewBox="0 0 43.5 44.9" enable-background="new 0 0 43.5 44.9" xml:space="preserve">
                                 <g>
                                     <path fill="white" d="M21.7,0.6c-12,0-21.8,9.8-21.8,21.8s9.8,21.8,21.8,21.8s21.8-9.8,21.8-21.8C43.5,10.5,33.7,0.6,21.7,0.6z
@@ -261,7 +332,7 @@
                     <li class="link-grey">
                         <a href="#contacts" data-menuanchor="contacts">
                          <span class="el-sprite">
-                            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                                      viewBox="0 0 43.5 44.9" enable-background="new 0 0 43.5 44.9" xml:space="preserve">
                                 <g>
                                     <path fill="white" d="M22,0.6c-12,0-21.8,9.8-21.8,21.8S10,44.2,22,44.2s21.7-9.9,21.7-21.8S33.9,0.6,22,0.6z M22,42.7
@@ -334,22 +405,23 @@
                                         <input type="password" id="password" name="password" required>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
-                                        <label for="password" class="lb-pass exam">&bull; &bull; &bull; &bull; &bull; &bull; &bull;</label>
+                                        <label for="password"
+                                               class="lb-pass exam">&bull; &bull; &bull; &bull; &bull; &bull; &bull;</label>
                                     </div>
                                 </div>
 
                             </div>
-                        <div></div>
+                            <div></div>
                         </div>
                         <div class="w100p clearfix">
                             <div class="wrapper-btn-enter">
                                 <input type="submit" class="btn-enter" value="вход">
                             </div>
-                           <div class="wrapper-btn-reg">
-                               <a href="#registration-modal" class="btn-reg fancybox">
-                                   РЕГИСТРАЦИЯ
-                               </a>
-                           </div>
+                            <div class="wrapper-btn-reg">
+                                <a href="#registration-modal" class="btn-reg fancybox">
+                                    РЕГИСТРАЦИЯ
+                                </a>
+                            </div>
                         </div>
 
                     </form>
@@ -375,12 +447,14 @@
                         <div class="bl-wrapper-txt clearfix">
                             <div class="bl-left box animated fadeInLeft">
                                 Мы собрались, чтобы помочь людям в
-                                решении их проблем, заставить проекты и вложения работать на них, уйти от тривиальных шагов и
+                                решении их проблем, заставить проекты и вложения работать на них, уйти от тривиальных
+                                шагов и
                                 шаблонных решений.
                             </div>
                             <div class="bl-center">
                                 <svg width="206" height="165" id="my-svg">
-                                    <linearGradient gradientUnits="objectBoundingBox" id="lgrd2-fire" spreadMethod="pad" x1="0.5" y1="0" x2="0.5" y2="1">
+                                    <linearGradient gradientUnits="objectBoundingBox" id="lgrd2-fire" spreadMethod="pad"
+                                                    x1="0.5" y1="0" x2="0.5" y2="1">
                                         <stop offset="0%" style="stop-color:#fa8503;stop-opacity:0.6"></stop>
                                         <stop offset="20%" style="stop-color:#fa8503;stop-opacity:0.7"></stop>
                                         <stop offset="40%" style="stop-color:#fa8503;stop-opacity:0.8"></stop>
@@ -388,14 +462,18 @@
                                         <stop offset="80%" style="stop-color:#5b5a59;stop-opacity:0.8"></stop>
                                         <stop offset="100%" style="stop-color:#5b5a59;stop-opacity:1"></stop>
                                     </linearGradient>
-                                    <line id="e1_line" x1="0" y1="0" x2="205" y2="0" stroke="#fa8503" style="stroke-width: 3px; fill: none;stop-opacity:0.6;"/>
-                                    <line id="e15_line" x1="103.8" y1="0" x2="104" y2="165" stroke="url('#lgrd2-fire')" style="stroke-width: 2px; fill: none;"/>
-                                    <line id="e30_line" x1="68" y1="165" x2="138" y2="165" stroke="#5b5a59" style="stroke-width: 3px; fill: none;"/>
+                                    <line id="e1_line" x1="0" y1="0" x2="205" y2="0" stroke="#fa8503"
+                                          style="stroke-width: 3px; fill: none;stop-opacity:0.6;"/>
+                                    <line id="e15_line" x1="103.8" y1="0" x2="104" y2="165" stroke="url('#lgrd2-fire')"
+                                          style="stroke-width: 2px; fill: none;"/>
+                                    <line id="e30_line" x1="68" y1="165" x2="138" y2="165" stroke="#5b5a59"
+                                          style="stroke-width: 3px; fill: none;"/>
                                 </svg>
                             </div>
                             <div class="bl-right box animated fadeInRight">
                                 Гибкость и открытость нашей команды
-                                прокладывает дорогу к пониманию наших клиентов и партнеров. Мы всегда помним, что работает с
+                                прокладывает дорогу к пониманию наших клиентов и партнеров. Мы всегда помним, что
+                                работает с
                                 живыми людьми, а не "серой массой".
                             </div>
                         </div>
@@ -416,7 +494,8 @@
                                 <div class="item">
                                     <div class="txt txt-top">Мы интенсивно развиваемся</div>
                                     <div class="amount"><span id="lines1">0</span></div>
-                                    <div class="txt txt-bottom">технических обновлений проекта было внедрено за год</div>
+                                    <div class="txt txt-bottom">технических обновлений проекта было внедрено за год
+                                    </div>
                                 </div>
                                 <div class="item">
                                     <div class="txt txt-top">Вебмастера <br/> доверяют нам</div>
@@ -431,7 +510,8 @@
                                 <div class="item">
                                     <div class="txt txt-top">Мы системно платим</div>
                                     <div class="amount" id="lines4">0</div>
-                                    <div class="txt txt-bottom">именно такую сумму в рублях мы уже выплатили нашим партнерам
+                                    <div class="txt txt-bottom">именно такую сумму в рублях мы уже выплатили нашим
+                                        партнерам
                                     </div>
                                 </div>
                             </div>
@@ -440,12 +520,14 @@
                                 <div class="item">
                                     <div class="txt txt-top">Мы интенсивно развиваемся</div>
                                     <div class="amount" id="lines5">0</div>
-                                    <div class="txt txt-bottom">технических обновлений проекта было внедрено за год</div>
+                                    <div class="txt txt-bottom">технических обновлений проекта было внедрено за год
+                                    </div>
                                 </div>
                                 <div class="item">
                                     <div class="txt txt-top">Наша реклама <br/>работает</div>
                                     <div class="amount" id="lines6">0</div>
-                                    <div class="txt txt-bottom">переходов совершено по <br/>объявлениям наших клиентов</div>
+                                    <div class="txt txt-bottom">переходов совершено по <br/>объявлениям наших клиентов
+                                    </div>
                                 </div>
                                 <div class="item">
                                     <div class="txt txt-top">Мы умеем продавать</div>
@@ -480,7 +562,7 @@
                                         <div class="txt dib">Личный <br/> менеджер</div>
 
                                         <div class="el-sprite dib">
-                                            <svg version="1.1" id="ic-men" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            <svg version="1.1" id="ic-men" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                                                  viewBox="0 0 34.6 40.5" enable-background="new 0 0 34.6 40.5" xml:space="preserve">
                                                 <g>
                                                      <linearGradient gradientUnits="objectBoundingBox" id="lgrd3-fire" spreadMethod="pad" x1="0.5" y1="0" x2="0.5" y2="1">
@@ -507,7 +589,7 @@
                                         <div class="txt dib">Качественно отобранные сайты</div>
 
                                         <div class="el-sprite dib">
-                                            <svg version="1.1" id="ic-site" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            <svg version="1.1" id="ic-site" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                                                      viewBox="0 0 42 37.3" enable-background="new 0 0 42 37.3" xml:space="preserve">
                                                 <g>
                                                     <linearGradient gradientUnits="objectBoundingBox" id="lgrd4-fire" spreadMethod="pad" x1="0.5" y1="0" x2="0.5" y2="1">
@@ -543,7 +625,7 @@
                                         <div class="txt dib">Мультивалютность</div>
 
                                         <div class="el-sprite dib">
-                                            <svg version="1.1" id="ic-cash" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            <svg version="1.1" id="ic-cash" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                                                  viewBox="0 0 34.6 33.9" enable-background="new 0 0 34.6 33.9" xml:space="preserve">
                                                 <g>
                                                     <path fill="url('#lgrd3-fire')" d="M20.7,25.2v-6.4c0-1.2,0.9-2.2,2.2-2.2h9.8v-5.5c0-0.8-0.6-1.4-1.4-1.4H1.8c-0.8,0-1.4,0.6-1.4,1.4v21.3
@@ -563,7 +645,7 @@
                                         <div class="txt dib">Персональный менеджер</div>
 
                                         <div class="el-sprite dib">
-                                            <svg version="1.1" id="ic-men" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            <svg version="1.1" id="ic-men" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                                                  viewBox="0 0 34.6 40.5" enable-background="new 0 0 34.6 40.5" xml:space="preserve">
                                                 <g>
                                                      <linearGradient gradientUnits="objectBoundingBox" id="lgrd3-fire" spreadMethod="pad" x1="0.5" y1="0" x2="0.5" y2="1">
@@ -595,7 +677,7 @@
                                         <div class="txt dib">Надежность</div>
 
                                         <div class="el-sprite dib">
-                                            <svg version="1.1" id="ic-server" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            <svg version="1.1" id="ic-server" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                                             viewBox="0 0 42.4 43.1" enable-background="new 0 0 42.4 43.1" xml:space="preserve">
                                             <g>
                                                 <path fill="url('#lgrd3-fire')" d="M42.3,14.5c-0.7-5.5-5.3-7.4-8.5-7.7c-1.8-3.7-5.8-4.3-8.5-4c-0.9-1.3-2.9-2.9-7.1-2.8
@@ -625,7 +707,7 @@
                                         <div class="txt dib">Широкий выбор <br/>тематик</div>
 
                                         <div class="el-sprite dib">
-                                            <svg version="1.1" id="ic-adv" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            <svg version="1.1" id="ic-adv" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                                                  viewBox="0 0 44.9 37.3" enable-background="new 0 0 44.9 37.3" xml:space="preserve">
                                             <path fill="url('#lgrd4-fire')" d="M40.9,12H30.6l2.5-1.9V2.4L29,0.3H15.6l-4.1,2.2v7.7l2.4,1.9H4.1L0,14.2v7.7l4.1,3.3h8.8L11.4,26v7.7
                                                 l4.1,3.3h13.2l4.3-3.3V26l-1.4-0.8h9l4.3-3.3v-7.7L40.9,12z M4.1,23.1l-2.7-1.9v-6l2.7-1.2V23.1z M17,23.8V13.5h10.6v10.3H17z
@@ -672,7 +754,7 @@
                                         <div class="txt dib">Нетривиальный<br/> подход</div>
 
                                         <div class="el-sprite dib">
-                                            <svg version="1.1" id="ic-brain" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            <svg version="1.1" id="ic-brain" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                                                  viewBox="0 0 27.6 37.7" enable-background="new 0 0 27.6 37.7" xml:space="preserve">
                                             <g>
                                                 <path fill="url('#lgrd3-fire')" d="M13.9,10.9c-1.6,0-2.9,1.3-2.9,2.9s1.3,2.9,2.9,2.9s2.9-1.3,2.9-2.9S15.5,10.9,13.9,10.9z M13.9,15.3
@@ -703,7 +785,7 @@
                                         </div>
 
                                         <div class="el-sprite dib">
-                                            <svg version="1.1" id="ic-mail" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            <svg version="1.1" id="ic-mail" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                                                  viewBox="0 0 35.9 39.6" enable-background="new 0 0 35.9 39.6" xml:space="preserve">
                                             <g>
                                                  <linearGradient gradientUnits="objectBoundingBox" id="lgrd4-fire" spreadMethod="pad" x1="0.5" y1="0" x2="0.5" y2="1">
@@ -748,16 +830,20 @@
 
                         <div class="bl-wrapper">
                             <div class="bl-limitations adv-hidden transition">
-                                <p class="box animated fadeInLeft">Вашего менеджера не будут звать Тимофей. Тимофей прости.<br/></p>
-                                <p class="box animated fadeInRight">Мы не понимаем язык орков и эльфов Лихолесья. (клингонский)<br/></p>
+                                <p class="box animated fadeInLeft">Вашего менеджера не будут звать Тимофей. Тимофей
+                                    прости.<br/></p>
+                                <p class="box animated fadeInRight">Мы не понимаем язык орков и эльфов Лихолесья.
+                                    (клингонский)<br/></p>
                                 <p class="box animated fadeInLeft">Все еще верим в существование зубной феи.<br/></p>
                                 <p class="box animated fadeInRight">Работаем по праздникам.</p>
                             </div>
 
                             <div class="bl-limitations webmaster-hidden transition">
                                 <p class="box animated fadeInRight">Наш трафик вызывает привыкание.<br/></p>
-                                <p class="box animated fadeInLeft">К сожалению, предоставляемые услуги не бесплатны<br/></p>
-                                <p class="box animated fadeInRight">Наш сисадмин до сих пор пьет “зеленый кофе” в надежде похудеть<br/></p>
+                                <p class="box animated fadeInLeft">К сожалению, предоставляемые услуги не бесплатны<br/>
+                                </p>
+                                <p class="box animated fadeInRight">Наш сисадмин до сих пор пьет “зеленый кофе” в
+                                    надежде похудеть<br/></p>
                                 <p><br/></p>
                             </div>
 
@@ -824,7 +910,8 @@
                             </div>
                         </div>
 
-                        <h3 class="subtitle subtitle--type-2"><span class="txt-gradient">Калькулятор счастья вебмастера</span>
+                        <h3 class="subtitle subtitle--type-2"><span
+                                class="txt-gradient">Калькулятор счастья вебмастера</span>
                         </h3>
 
 
@@ -835,14 +922,16 @@
                                     <div class="txt">Количество посетителей</div>
                                     <div class="wrapper-input">
                                         <div class="txt-error fll"></div>
-                                        <input type="text" placeholder="3000" value="3000" class="amount-visitors" pattern="\d+">
+                                        <input type="text" placeholder="3000" value="3000" class="amount-visitors"
+                                               pattern="\d+">
                                     </div>
                                 </div>
                                 <div class="wrapper-txt clearfix">
                                     <div class="txt">Количество просмотров</div>
                                     <div class="wrapper-input">
                                         <div class="txt-error fll"></div>
-                                        <input type="text" placeholder="3000" value="3000" class="amount-preview" pattern="\d+">
+                                        <input type="text" placeholder="3000" value="3000" class="amount-preview"
+                                               pattern="\d+">
                                     </div>
                                 </div>
                                 <div class="wrapper-txt clearfix">
@@ -900,7 +989,8 @@
 
                 <div class="container section-partners-adv webmaster-hidden animated fadeInRight">
                     <div class="bl-wrapper-content animated fadeInLeft w100p dib">
-                        <h3 class="subtitle subtitle--type-3"><span class="txt-gradient">Предоставляемые услуги</span></h3>
+                        <h3 class="subtitle subtitle--type-3"><span class="txt-gradient">Предоставляемые услуги</span>
+                        </h3>
 
                         <div class="section-partners__adv-content clearfix">
                             <p>бесплатное создание тизеров</p>
@@ -910,7 +1000,8 @@
                             <p>дополнительные аналетические модули по запросу</p>
                         </div>
 
-                        <h3 class="subtitle subtitle--type-2"><span class="txt-gradient">Калькулятор счастья  рекламодателя</span></h3>
+                        <h3 class="subtitle subtitle--type-2"><span class="txt-gradient">Калькулятор счастья  рекламодателя</span>
+                        </h3>
 
 
                         <div class="bl-wrapper-calc bl-wrapper-calc-adv clearfix">
@@ -935,24 +1026,60 @@
                                         <div class="txt">Выберите тематики площадок</div>
                                         <div class="wrapper-input">
                                             <select name="themes" id="themes">
-                                                <option value="1" data-click="250" data-cpc="250" data-total-adv="500" seleted>Адалт</option>
-                                                <option value="2" data-click="350" data-cpc="350" data-total-adv="600">Детские</option>
-                                                <option value="3" data-click="450" data-cpc="450" data-total-adv="700">Женские</option>
-                                                <option value="4" data-click="550" data-cpc="650" data-total-adv="800">Игры</option>
-                                                <option value="4" data-click="450" data-cpc="450" data-total-adv="700">Кино</option>
-                                                <option value="4" data-click="250" data-cpc="250" data-total-adv="500">Кино (премиум)</option>
-                                                <option value="5" data-click="450" data-cpc="450" data-total-adv="700">Литература</option>
-                                                <option value="6" data-click="250" data-cpc="250" data-total-adv="500">Музыка</option>
-                                                <option value="7" data-click="250" data-cpc="250" data-total-adv="500">Новости и СМИ</option>
-                                                <option value="8" data-click="450" data-cpc="450" data-total-adv="700">Обучение</option>
-                                                <option value="9" data-click="450" data-cpc="450" data-total-adv="700">Плагин</option>
-                                                <option value="10" data-click="450" data-cpc="450" data-total-adv="700">Прочее</option>
-                                                <option value="11" data-click="250" data-cpc="250" data-total-adv="500">Развлечения</option>
-                                                <option value="12" data-click="250" data-cpc="250" data-total-adv="500">Реклама</option>
-                                                <option value="13" data-click="250" data-cpc="250" data-total-adv="500">Софт</option>
-                                                <option value="14" data-click="250" data-cpc="250" data-total-adv="500">Торрент-трекеры</option>
-                                                <option value="15" data-click="250" data-cpc="250" data-total-adv="500">Файлообменники</option>
-                                                <option value="16" data-click="250" data-cpc="250" data-total-adv="500">Фото, Картинки</option>
+                                                <option value="1" data-click="250" data-cpc="250" data-total-adv="500"
+                                                        seleted>Адалт
+                                                </option>
+                                                <option value="2" data-click="350" data-cpc="350" data-total-adv="600">
+                                                    Детские
+                                                </option>
+                                                <option value="3" data-click="450" data-cpc="450" data-total-adv="700">
+                                                    Женские
+                                                </option>
+                                                <option value="4" data-click="550" data-cpc="650" data-total-adv="800">
+                                                    Игры
+                                                </option>
+                                                <option value="4" data-click="450" data-cpc="450" data-total-adv="700">
+                                                    Кино
+                                                </option>
+                                                <option value="4" data-click="250" data-cpc="250" data-total-adv="500">
+                                                    Кино (премиум)
+                                                </option>
+                                                <option value="5" data-click="450" data-cpc="450" data-total-adv="700">
+                                                    Литература
+                                                </option>
+                                                <option value="6" data-click="250" data-cpc="250" data-total-adv="500">
+                                                    Музыка
+                                                </option>
+                                                <option value="7" data-click="250" data-cpc="250" data-total-adv="500">
+                                                    Новости и СМИ
+                                                </option>
+                                                <option value="8" data-click="450" data-cpc="450" data-total-adv="700">
+                                                    Обучение
+                                                </option>
+                                                <option value="9" data-click="450" data-cpc="450" data-total-adv="700">
+                                                    Плагин
+                                                </option>
+                                                <option value="10" data-click="450" data-cpc="450" data-total-adv="700">
+                                                    Прочее
+                                                </option>
+                                                <option value="11" data-click="250" data-cpc="250" data-total-adv="500">
+                                                    Развлечения
+                                                </option>
+                                                <option value="12" data-click="250" data-cpc="250" data-total-adv="500">
+                                                    Реклама
+                                                </option>
+                                                <option value="13" data-click="250" data-cpc="250" data-total-adv="500">
+                                                    Софт
+                                                </option>
+                                                <option value="14" data-click="250" data-cpc="250" data-total-adv="500">
+                                                    Торрент-трекеры
+                                                </option>
+                                                <option value="15" data-click="250" data-cpc="250" data-total-adv="500">
+                                                    Файлообменники
+                                                </option>
+                                                <option value="16" data-click="250" data-cpc="250" data-total-adv="500">
+                                                    Фото, Картинки
+                                                </option>
                                             </select>
                                         </div>
                                     </div>
@@ -1000,7 +1127,8 @@
                             <div class="item fll animated fadeInLeft">
                                 <div class="el-accordion__head"><span>Какая у вас цена клика?</span></div>
                                 <div class="accordion_dropdown">Макрос - это набор символов, прописывающийся в ссылку
-                                    рекламодателя для последующей подмены необходимым значением при переходе по данной ссылке
+                                    рекламодателя для последующей подмены необходимым значением при переходе по данной
+                                    ссылке
                                     пользователем. Макросы используются для передачи необходимой информации в статистику
                                     партнерской программы для последующей обработки и классификации конверсий.
                                 </div>
@@ -1009,7 +1137,8 @@
                             <div class="item fll animated fadeInRight">
                                 <div class="el-accordion__head"><span>Сколько платите?</span></div>
                                 <div class="accordion_dropdown">Макрос - это набор символов, прописывающийся в ссылку
-                                    рекламодателя для последующей подмены необходимым значением при переходе по данной ссылке
+                                    рекламодателя для последующей подмены необходимым значением при переходе по данной
+                                    ссылке
                                     пользователем. Макросы используются для передачи необходимой информации в статистику
                                     партнерской программы для последующей обработки и классификации конверсий.
                                 </div>
@@ -1018,16 +1147,19 @@
                                 <div class="el-accordion__head">
                                     <span>Почему я так мало заработал?! Ведь прошло уже 5 часов!</span></div>
                                 <div class="accordion_dropdown">Макрос - это набор символов, прописывающийся в ссылку
-                                    рекламодателя для последующей подмены необходимым значением при переходе по данной ссылке
+                                    рекламодателя для последующей подмены необходимым значением при переходе по данной
+                                    ссылке
                                     пользователем. Макросы используются для передачи необходимой информации в статистику
                                     партнерской программы для последующей обработки и классификации конверсий.
                                 </div>
                             </div>
 
                             <div class="item fll animated fadeInRight">
-                                <div class="el-accordion__head"><span>Я попаду под фильтр из-за ваших тизеров?</span></div>
+                                <div class="el-accordion__head"><span>Я попаду под фильтр из-за ваших тизеров?</span>
+                                </div>
                                 <div class="accordion_dropdown">Макрос - это набор символов, прописывающийся в ссылку
-                                    рекламодателя для последующей подмены необходимым значением при переходе по данной ссылке
+                                    рекламодателя для последующей подмены необходимым значением при переходе по данной
+                                    ссылке
                                     пользователем. Макросы используются для передачи необходимой информации в статистику
                                     партнерской программы для последующей обработки и классификации конверсий.
                                 </div>
@@ -1036,16 +1168,19 @@
                             <div class="item fll animated fadeInLeft">
                                 <div class="el-accordion__head"><span>Что будет рекламироваться?</span></div>
                                 <div class="accordion_dropdown">Макрос - это набор символов, прописывающийся в ссылку
-                                    рекламодателя для последующей подмены необходимым значением при переходе по данной ссылке
+                                    рекламодателя для последующей подмены необходимым значением при переходе по данной
+                                    ссылке
                                     пользователем. Макросы используются для передачи необходимой информации в статистику
                                     партнерской программы для последующей обработки и классификации конверсий.
                                 </div>
                             </div>
 
                             <div class="item fll animated fadeInRight">
-                                <div class="el-accordion__head"><span>Можно ли выбирать самому тематику тизеров?</span></div>
+                                <div class="el-accordion__head"><span>Можно ли выбирать самому тематику тизеров?</span>
+                                </div>
                                 <div class="accordion_dropdown">Макрос - это набор символов, прописывающийся в ссылку
-                                    рекламодателя для последующей подмены необходимым значением при переходе по данной ссылке
+                                    рекламодателя для последующей подмены необходимым значением при переходе по данной
+                                    ссылке
                                     пользователем. Макросы используются для передачи необходимой информации в статистику
                                     партнерской программы для последующей обработки и классификации конверсий.
                                 </div>
@@ -1061,7 +1196,8 @@
                             <div class="item fll animated fadeInLeft">
                                 <div class="el-accordion__head"><span>Какая у вас цена клика?</span></div>
                                 <div class="accordion_dropdown">Макрос - это набор символов, прописывающийся в ссылку
-                                    рекламодателя для последующей подмены необходимым значением при переходе по данной ссылке
+                                    рекламодателя для последующей подмены необходимым значением при переходе по данной
+                                    ссылке
                                     пользователем. Макросы используются для передачи необходимой информации в статистику
                                     партнерской программы для последующей обработки и классификации конверсий.
                                 </div>
@@ -1070,7 +1206,8 @@
                             <div class="item fll animated fadeInRight">
                                 <div class="el-accordion__head"><span>Сколько платите?</span></div>
                                 <div class="accordion_dropdown">Макрос - это набор символов, прописывающийся в ссылку
-                                    рекламодателя для последующей подмены необходимым значением при переходе по данной ссылке
+                                    рекламодателя для последующей подмены необходимым значением при переходе по данной
+                                    ссылке
                                     пользователем. Макросы используются для передачи необходимой информации в статистику
                                     партнерской программы для последующей обработки и классификации конверсий.
                                 </div>
@@ -1079,16 +1216,19 @@
                                 <div class="el-accordion__head">
                                     <span>Почему я так мало заработал?! Ведь прошло уже 5 часов!</span></div>
                                 <div class="accordion_dropdown">Макрос - это набор символов, прописывающийся в ссылку
-                                    рекламодателя для последующей подмены необходимым значением при переходе по данной ссылке
+                                    рекламодателя для последующей подмены необходимым значением при переходе по данной
+                                    ссылке
                                     пользователем. Макросы используются для передачи необходимой информации в статистику
                                     партнерской программы для последующей обработки и классификации конверсий.
                                 </div>
                             </div>
 
                             <div class="item fll animated fadeInRight">
-                                <div class="el-accordion__head"><span>Я попаду под фильтр из-за ваших тизеров?</span></div>
+                                <div class="el-accordion__head"><span>Я попаду под фильтр из-за ваших тизеров?</span>
+                                </div>
                                 <div class="accordion_dropdown">Макрос - это набор символов, прописывающийся в ссылку
-                                    рекламодателя для последующей подмены необходимым значением при переходе по данной ссылке
+                                    рекламодателя для последующей подмены необходимым значением при переходе по данной
+                                    ссылке
                                     пользователем. Макросы используются для передачи необходимой информации в статистику
                                     партнерской программы для последующей обработки и классификации конверсий.
                                 </div>
@@ -1097,16 +1237,19 @@
                             <div class="item fll animated fadeInLeft">
                                 <div class="el-accordion__head"><span>Что будет рекламироваться?</span></div>
                                 <div class="accordion_dropdown">Макрос - это набор символов, прописывающийся в ссылку
-                                    рекламодателя для последующей подмены необходимым значением при переходе по данной ссылке
+                                    рекламодателя для последующей подмены необходимым значением при переходе по данной
+                                    ссылке
                                     пользователем. Макросы используются для передачи необходимой информации в статистику
                                     партнерской программы для последующей обработки и классификации конверсий.
                                 </div>
                             </div>
 
                             <div class="item fll animated fadeInRight">
-                                <div class="el-accordion__head"><span>Можно ли выбирать самому тематику тизеров?</span></div>
+                                <div class="el-accordion__head"><span>Можно ли выбирать самому тематику тизеров?</span>
+                                </div>
                                 <div class="accordion_dropdown">Макрос - это набор символов, прописывающийся в ссылку
-                                    рекламодателя для последующей подмены необходимым значением при переходе по данной ссылке
+                                    рекламодателя для последующей подмены необходимым значением при переходе по данной
+                                    ссылке
                                     пользователем. Макросы используются для передачи необходимой информации в статистику
                                     партнерской программы для последующей обработки и классификации конверсий.
                                 </div>
@@ -1125,7 +1268,8 @@
                     <div class="bl-wrapper-content animated fadeInRight">
                         <h3 class="subtitle subtitle--type-2"><span class="txt-gradient">контакты</span></h3>
                         <div class="bl-txt">Не нашли ответ на интересующий Вас вопрос у нас на сайте? Смело пишите нашей
-                            поддержке! Наши приоритеты это долгосрочное взаимовыгодное сотрудничество, а поэтому мы приложим
+                            поддержке! Наши приоритеты это долгосрочное взаимовыгодное сотрудничество, а поэтому мы
+                            приложим
                             максимум усилий, что бы найти решения для любых нетривиальных задач.
                         </div>
 
@@ -1141,7 +1285,7 @@
                                         <span class="el-small-txt webmaster-hidden">maxim.tapkin@etarg.ru</span>
                                     </span>
                                     <span class="el-sprite">
-                                        <svg version="1.1" id="ic-mail" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        <svg version="1.1" id="ic-mail" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                                              viewBox="0 0 35.9 39.6" enable-background="new 0 0 35.9 39.6" xml:space="preserve">
                                         <g>
                                              <linearGradient gradientUnits="objectBoundingBox" id="lgrd4-fire" spreadMethod="pad" x1="0.5" y1="0" x2="0.5" y2="1">
@@ -1178,7 +1322,7 @@
                                  <span class="el-small-txt webmaster-hidden">maxim.tapkin</span>
                             </span>
                                     <span class="el-sprite">
-                                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                                      viewBox="0 0 35.9 39.6" enable-background="new 0 0 35.9 39.6" xml:space="preserve">
                                 <g>
                                     <path fill="url('#lgrd4-fire')" d="M30.3,6.4C26.2,1.9,21.4,0.9,18,0.9c-0.8,0-1.6,0.1-2.4,0.1C15,0.7,13.3,0,11.2,0C9,0,6.8,0.8,4.9,2.4
@@ -1195,14 +1339,15 @@
                             </span>
                                 </a>
 
-                                <a href="http://www.icq.com/whitepages/cmd.php?uin=676692748&action=message" class="el-link el-link__icq clearfix">
+                                <a href="http://www.icq.com/whitepages/cmd.php?uin=676692748&action=message"
+                                   class="el-link el-link__icq clearfix">
                             <span class="bl-left">
                                 <span class="el-big-txt">icq</span>
                                 <span class="el-small-txt adv-hidden">676692748</span>
                                 <span class="el-small-txt webmaster-hidden">669465439</span>
                             </span>
                                     <span class="el-sprite">
-                                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                                      viewBox="0 0 35.9 39.6" enable-background="new 0 0 35.9 39.6" xml:space="preserve">
                                 <path fill="url('#lgrd4-fire')" d="M26.2,0.8c-3.1-1.2-6.8,1.3-8.4,5.4c-0.1,0.4-0.2,0.9-0.2,1.7c-0.6-1.2-1.4-2.1-2.4-2.7
                                     c-1.2-0.9-2.4-1-3.5-0.5c-0.7,0.4-1.2,0.9-1.6,1.8c-0.4,1-0.4,2.3-0.1,3.6C10,10,9.9,10,9.8,10c-4.1-1.5-8.4-0.1-9.5,3
@@ -1233,7 +1378,7 @@
                             <div class="bl-wrapper-right animated fadeInRight">
                                 <a href="#" class="el-link">
                             <span class="el-sprite">
-                                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                                      viewBox="0 0 35.9 39.6" enable-background="new 0 0 35.9 39.6" xml:space="preserve">
                                 <g>
                                     <path fill="url('#lgrd4-fire')" d="M18,0C8.7,0,1.2,7.5,1.2,16.8S8.7,33.6,18,33.6s16.8-7.5,16.8-16.8S27.2,0,18,0z M18,32
@@ -1259,7 +1404,7 @@
                                 </a>
                                 <a href="#" class="el-link">
                             <span class="el-sprite">
-                                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                                      viewBox="0 0 35.9 39.6" enable-background="new 0 0 35.9 39.6" xml:space="preserve">
                                 <path fill="url('#lgrd4-fire')" d="M30.6,14.8c-0.6-2-3.9-3.3-5.8-3.3h-0.4c-0.4,0-0.7,0-1.1,0c-1.7,0-2.2-0.3-2.3-0.5
                                     c-0.1-0.1-0.2-0.5,0.4-1.6c2.2-3.8,2.4-6.6,0.8-8.5C21.6,0.3,21.1,0,20.5,0c-1.5,0-2.4,1.9-3.7,5c-1.3,3.2-6,6.8-7.1,7.7
@@ -1277,7 +1422,7 @@
                                 </a>
                                 <a href="#" class="el-link">
                             <span class="el-sprite">
-                              <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                                      viewBox="0 0 35.9 39.6" enable-background="new 0 0 35.9 39.6" xml:space="preserve">
                                 <g>
                                     <path fill="url('#lgrd4-fire')" d="M34.7,22.4L32.6,3.8c-0.1-1-1-1.7-2-1.6L2.8,5.4c-1,0.1-1.7,1-1.6,2l2.2,18.6c0.1,0.9,0.9,1.6,1.8,1.6
@@ -1302,7 +1447,7 @@
                                 </a>
                                 <a href="#" class="el-link">
                             <span class="el-sprite el-webmoney">
-                                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                                      viewBox="0 0 35.9 39.6" enable-background="new 0 0 35.9 39.6" xml:space="preserve">
                                 <g>
                                     <rect x="13" y="5.6" transform="matrix(0.7071 0.7071 -0.7071 0.7071 10.3035 -8.5778)" fill="url('#lgrd4-fire')" width="5.1" height="5.1"/>
@@ -1371,7 +1516,16 @@
             <header class="bl-modal-header">
                 <div class="ttl">
                     <span class="el-sprite">
-                        <i class="sprite sprite-ic-key"></i>
+                       <svg width="47" height="46" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+                                     viewBox="0 0 47 47" enable-background="new 0 0 47 47" xml:space="preserve">
+                         <g>
+                          <g id="svg_34">
+                           <path id="svg_1" d="m30.8,15.4c0,-8.5 -6.9,-15.4 -15.4,-15.4s-15.4,6.9 -15.4,15.4c0,4.8 2.2,9 5.6,11.9c0.4,8.7 2.4,9.2 3.1,9.3c0.1,0 0.3,0 0.4,0c1.8,0 3,-2.5 3.4,-3.4l-1.8,-0.9c-1,2.1 -1.6,2.3 -1.6,2.3c-0.1,0 -1.1,-0.8 -1.4,-6c2.3,1.3 4.9,2.1 7.7,2.1c8.5,0.1 15.4,-6.8 15.4,-15.3zm-28.8,0c0,-7.4 6,-13.4 13.4,-13.4s13.4,6 13.4,13.4s-6,13.4 -13.4,13.4c-2.9,0 -5.6,-0.9 -7.8,-2.5c-0.1,-4.5 1.3,-8.3 2.5,-10.9c0.5,0.2 1,0.3 1.6,0.3c2.3,0 4.1,-1.9 4.1,-4.1s-1.9,-4.1 -4.1,-4.1s-4.1,1.9 -4.1,4.1c0,1 0.3,1.8 0.9,2.5c-1.2,2.4 -2.5,6.1 -2.8,10.4c-2.3,-2.4 -3.7,-5.6 -3.7,-9.1zm7.5,-3.9c0,-1.2 1,-2.1 2.1,-2.1s2.1,1 2.1,2.1s-1,2.1 -2.1,2.1c-0.2,0 -0.5,0 -0.7,-0.1c0.5,-0.9 0.9,-1.4 0.9,-1.4l-1.6,-1.2c0,0.1 -0.3,0.4 -0.6,1c-0.1,-0.1 -0.1,-0.2 -0.1,-0.4z"/>
+                           <polygon id="svg_2" points="32.50000619888306,22.900000035762787 31.09999704360962,24.299993932247162 44.50000619888306,38.099996984004974 44.50000619888306,44.40000003576279 38.700003147125244,44.40000003576279 38.09999704360962,42.099996984004974 35.59999704360962,41.29999393224716 35.59999704360962,38.2000030875206 32.700003147125244,38.099996984004974 32.29999399185181,35.00000613927841 28.59999704360962,35.099996984004974 24.40000009536743,30.900000035762787 22.90000009536743,32.40000003576279 27.700003147125244,37.099996984004974 30.500006198883057,37.00000613927841 30.90000009536743,40.00000613927841 33.59999704360962,40.099996984004974 33.59999704360962,42.79999393224716 36.40000009536743,43.7000030875206 37.09999704360962,46.40000003576279 46.50000619888306,46.40000003576279 46.50000619888306,37.2000030875206 "/>
+                           <rect id="svg_3" height="19.3" width="2" y="24.3" x="34.3"/>
+                          </g>
+                         </g>
+                        </svg>
                     </span>
                     <span class="txt txt-gradient">Регистрация</span>
                 </div>
@@ -1451,7 +1605,8 @@
                         </div>
 
                         <div class="wrapper-checkbox w100p">
-                            <input type="checkbox" name="agree" class="el-agree" id="agree" title="Прочтите, пожалуйста, правила, и подтвердите согласие с ними." required>
+                            <input type="checkbox" name="agree" class="el-agree" id="agree"
+                                   title="Прочтите, пожалуйста, правила, и подтвердите согласие с ними." required>
                             <label for="agree" class="label-check">
                                 <span></span>
                                 СОГЛАСЕН С <a href="?page=terms" target="_blank" class="el-link-check">ПРАВИЛАМИ</a>
@@ -1488,8 +1643,6 @@
 </div>
 
 
-
-
 <!----------------------------MODAL--------------------------------------------------------------------------------->
 
 
@@ -1518,14 +1671,30 @@
 
     var count = function () {
         var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(' ');
-        $('#lines1').animateNumber({ number: 112, easing: 'easeOutQuart', numberStep: comma_separator_number_step }, 2500);
-        $('#lines2').animateNumber({ number: 8475, easing: 'easeOutQuart', numberStep: comma_separator_number_step }, 2500);
-        $('#lines3').animateNumber({ number: 87600000, easing: 'easeOutQuart', numberStep: comma_separator_number_step }, 2500);
-        $('#lines4').animateNumber({ number: 178915962, easing: 'easeOutQuart', numberStep: comma_separator_number_step }, 2500);
-        $('#lines5').animateNumber({ number: 37843287, numberStep: comma_separator_number_step }, 2000);
-        $('#lines6').animateNumber({ number: 30000000, numberStep: comma_separator_number_step }, 1500);
-        $('#lines7').animateNumber({ number: 75000, numberStep: comma_separator_number_step }, 2500);
-        $('#lines8').animateNumber({ number: 250000, numberStep: comma_separator_number_step }, 1900);
+        $('#lines1').animateNumber({
+            number: 112,
+            easing: 'easeOutQuart',
+            numberStep: comma_separator_number_step
+        }, 2500);
+        $('#lines2').animateNumber({
+            number: 8475,
+            easing: 'easeOutQuart',
+            numberStep: comma_separator_number_step
+        }, 2500);
+        $('#lines3').animateNumber({
+            number: 87600000,
+            easing: 'easeOutQuart',
+            numberStep: comma_separator_number_step
+        }, 2500);
+        $('#lines4').animateNumber({
+            number: 178915962,
+            easing: 'easeOutQuart',
+            numberStep: comma_separator_number_step
+        }, 2500);
+        $('#lines5').animateNumber({number: 37843287, numberStep: comma_separator_number_step}, 2000);
+        $('#lines6').animateNumber({number: 30000000, numberStep: comma_separator_number_step}, 1500);
+        $('#lines7').animateNumber({number: 75000, numberStep: comma_separator_number_step}, 2500);
+        $('#lines8').animateNumber({number: 250000, numberStep: comma_separator_number_step}, 1900);
     }
 
 </script>

@@ -1,8 +1,7 @@
 $(window).load(function () {
     setTimeout(function () {
-        $('.wrapper-preloader').hide();
-    }, 1000)
-
+        $('.wrapper-preloader').animate({opacity:'0'},1000).queue(function (){$(this).css({display:'none'});});
+    }, 2000)
 });
 jQuery.validator.setDefaults({
     debug: true,
