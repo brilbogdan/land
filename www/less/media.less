@@ -803,14 +803,14 @@
         .bl-wrapper-txt {
             .bl-wrapper-left{
                 width: 100%;
-                .bl-left{
-                    width: 50%;
-                    padding-right: 50px;
-                }
-                .bl-right{
-                    width: 50%;
-                    padding-left: 50px;
-                }
+                //.bl-left{
+                //    width: 50%;
+                //    padding-right: 50px;
+                //}
+                //.bl-right{
+                //    width: 50%;
+                //    padding-left: 50px;
+                //}
             }
         }
         .subtitle--type-2{
@@ -1071,6 +1071,23 @@
         }
     }
 }
+@media (min-width: 361px) and (max-device-width: 750px){
+    .section-partners {
+        .bl-wrapper-txt {
+            .bl-wrapper-left {
+                width: 100%;
+                .bl-left{
+                    width: 50%;
+                    padding-right: 50px;
+                }
+                .bl-right{
+                    width: 50%;
+                    padding-left: 50px;
+                }
+            }
+        }
+    }
+}
 @media (max-width: 360px) {
     .section-know {
         .el-accordion__head{
@@ -1094,8 +1111,32 @@
             }
         }
     }
+    .section-partners {
+        .bl-wrapper-txt {
+            .bl-wrapper-left {
+                .bl-left{
+                    padding-right: 28px;
+                }
+            }
+        }
+    }
 }
-@media (orientation: landscape) and (max-device-width: 750px)  {
+@media (orientation: landscape) and (max-device-width: 750px){
+    //.section-partners {
+    //    .bl-wrapper-txt {
+    //        .bl-wrapper-left {
+    //            width: 100%;
+    //            .bl-left{
+    //                width: 50%;
+    //                padding-right: 50px;
+    //            }
+    //            .bl-right{
+    //                width: 50%;
+    //                padding-left: 50px;
+    //            }
+    //        }
+    //    }
+    //}
     .el-logo {
         img{
             width: 40%;
