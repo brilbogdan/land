@@ -804,7 +804,12 @@
             .bl-wrapper-left{
                 width: 100%;
                 .bl-left{
-                    padding-right: 34px;
+                    width: 50%;
+                    padding-right: 50px;
+                }
+                .bl-right{
+                    width: 50%;
+                    padding-left: 50px;
                 }
             }
         }
@@ -1088,6 +1093,22 @@
                 display: none;
             }
         }
+    }
+}
+@media (orientation: landscape) and (max-device-width: 750px)  {
+    .el-logo {
+        img{
+            width: 40%;
+        }
+    }
+    .bl-form-body{
+        margin-top: 25px;
+        .bl-wrapper-input{
+            margin-bottom: 29px;
+        }
+    }
+    .section-header{
+        padding-top: 10px;
     }
 }
 

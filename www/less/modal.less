@@ -148,6 +148,21 @@
                 }
             }
 
+            &.active{
+                span{
+                    background: @gradient;
+                    background-color: #F44336;
+                }
+            }
+        }
+        .el-link-check{
+            color: white;
+            text-decoration: underline;
+        }
+    }
+    .wrapper-checkbox,
+    .wrapper-inp-right{
+        label{
             &.error{
                 position: absolute;
                 top: 0;
@@ -177,17 +192,6 @@
                 animation-play-state: running;
                 animation-fill-mode: forwards;
             }
-            &.active{
-                span{
-                    background: @gradient;
-                    background-color: #F44336;
-                }
-            }
-        }
-
-        .el-link-check{
-            color: white;
-            text-decoration: underline;
         }
     }
     .wrapper-captcha{

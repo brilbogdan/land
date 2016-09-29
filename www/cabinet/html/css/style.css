@@ -313,8 +313,12 @@ border-radius: 10px;
 .link a {color: #fd671a; font-size: 14px; font-family: 'Exo 2', sans-serif; font-weight: 400; line-height: 15px; display: inline-block; vertical-align: top;}
 .link a:hover {text-decoration: none;}
 
-.payment {float: right; position: relative; z-index: 5;} 
-.payment .left {float: left; margin-left: 13px;}
+.payment {float: right; position: relative; z-index: 5;width: 250px}
+.payment svg{width: 39px;margin-right: 10px}
+.payment svg rect,path{fill:#fd671a}
+.payment .txt--type-2{float: right;margin-top: -5px;font-size: 12px;}
+.payment .txt--type-2 .txt-top{display: block;margin-top: 3px;}
+.payment .txt--type-2 .txt-bottom{display: block;margin-top: -5px;}
 
 .copyr {position: absolute; left: 0; top: 0; width: 100%; text-align: center; color: #818181; font-size: 14px; font-family: 'Exo 2', sans-serif; font-weight: 400; line-height: 28px;}
 

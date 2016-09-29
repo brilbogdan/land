@@ -1,7 +1,8 @@
 $(window).load(function () {
-    setTimeout(function () {
-        $('.wrapper-preloader').animate({opacity:'0'},1000).queue(function (){$(this).css({display:'none'});});
-    }, 2000)
+    $('.wrapper-preloader').animate({opacity:'0'},1000).queue(function (){$(this).css({display:'none'});});
+    $('.group').click(function () {
+        $(this).children('input').focus()
+    })
 });
 jQuery.validator.setDefaults({
     debug: true,
@@ -179,6 +180,14 @@ $(document).ready(function () {
                 },
                 agree:{
                     required: true
+                },
+                usd: {
+                    require_from_group: [1, '.phone'],
+                    number: true
+                },
+                eur: {
+                    require_from_group: [1, '.phone'],
+                    number: true
                 }
             }
         });

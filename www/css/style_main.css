@@ -876,6 +876,11 @@ body {
 .group input:focus ~ .bar:after {
   width: 50%;
 }
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: transparent;
+}
 /* HIGHLIGHTER ================================== */
 .highlight {
   position: absolute;
@@ -885,6 +890,7 @@ body {
   left: 0;
   pointer-events: none;
   opacity: 0.5;
+  display: none;
 }
 /* active state */
 .group input:focus ~ .highlight {
@@ -2690,7 +2696,20 @@ section {
   vertical-align: -2px;
   margin-right: 5px;
 }
-.modal-wrapper .wrapper-checkbox label.error {
+.modal-wrapper .wrapper-checkbox label.active span {
+  background: -webkit-gradient(linear, left top, right top, from(#ff6d00), to(#ff9e00));
+  background: -webkit-linear-gradient(left, #ff6d00 0%, #ff9e00 100%);
+  background: -moz-linear-gradient(left, #ff6d00 0%, #ff9e00 100%);
+  background: -o-linear-gradient(left, #ff6d00 0%, #ff9e00 100%);
+  background: linear-gradient(to right, #ff6d00 0%, #ff9e00 100%);
+  background-color: #F44336;
+}
+.modal-wrapper .wrapper-checkbox .el-link-check {
+  color: white;
+  text-decoration: underline;
+}
+.modal-wrapper .wrapper-checkbox label.error,
+.modal-wrapper .wrapper-inp-right label.error {
   position: absolute;
   top: 0;
   background-color: #F44336;
@@ -2745,7 +2764,8 @@ section {
   -ms-flex-pack: center;
   justify-content: center;
 }
-.modal-wrapper .wrapper-checkbox label.valid {
+.modal-wrapper .wrapper-checkbox label.valid,
+.modal-wrapper .wrapper-inp-right label.valid {
   -webkit-animation-name: checkLabelValid;
   -moz-animation-name: checkLabelValid;
   -o-animation-name: checkLabelValid;
@@ -2774,18 +2794,6 @@ section {
   -moz-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-}
-.modal-wrapper .wrapper-checkbox label.active span {
-  background: -webkit-gradient(linear, left top, right top, from(#ff6d00), to(#ff9e00));
-  background: -webkit-linear-gradient(left, #ff6d00 0%, #ff9e00 100%);
-  background: -moz-linear-gradient(left, #ff6d00 0%, #ff9e00 100%);
-  background: -o-linear-gradient(left, #ff6d00 0%, #ff9e00 100%);
-  background: linear-gradient(to right, #ff6d00 0%, #ff9e00 100%);
-  background-color: #F44336;
-}
-.modal-wrapper .wrapper-checkbox .el-link-check {
-  color: white;
-  text-decoration: underline;
 }
 .modal-wrapper .wrapper-captcha {
   float: left;
@@ -3836,7 +3844,12 @@ section {
     width: 100%;
   }
   .section-partners .bl-wrapper-txt .bl-wrapper-left .bl-left {
-    padding-right: 34px;
+    width: 50%;
+    padding-right: 50px;
+  }
+  .section-partners .bl-wrapper-txt .bl-wrapper-left .bl-right {
+    width: 50%;
+    padding-left: 50px;
   }
   .section-partners .subtitle--type-2 {
     margin-top: 69px;
@@ -4068,5 +4081,19 @@ section {
   }
   .modal-wrapper .bl-modal-header .el-sprite {
     display: none;
+  }
+}
+@media (orientation: landscape) and (max-device-width: 750px) {
+  .el-logo img {
+    width: 40%;
+  }
+  .bl-form-body {
+    margin-top: 25px;
+  }
+  .bl-form-body .bl-wrapper-input {
+    margin-bottom: 29px;
+  }
+  .section-header {
+    padding-top: 10px;
   }
 }
