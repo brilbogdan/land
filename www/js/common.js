@@ -182,12 +182,27 @@ $(document).ready(function () {
                     required: true
                 },
                 usd: {
-                    require_from_group: [1, '.phone'],
-                    number: true
+                    require_from_group: [1, '.webmoney'],
+                    // pattern:"[^0-9]"
                 },
                 eur: {
-                    require_from_group: [1, '.phone'],
-                    number: true
+                    require_from_group: [1, '.webmoney'],
+                    // number: true
+                },
+                uah: {
+                    require_from_group: [1, '.webmoney'],
+                    // number: true
+                },
+                rur: {
+                    require_from_group: [1, '.webmoney'],
+                    // number: true
+                },
+                skype: {
+                    require_from_group_phone: [1, '.phone']
+                },
+                icq: {
+                    require_from_group_phone: [1, '.phone'],
+                    // number: true
                 }
             }
         });

@@ -540,6 +540,22 @@ jQuery.validator.addMethod("require_from_group", function(value, element, option
     return validOrNot;
 })
 
+jQuery.validator.addMethod("require_from_group_phone", function(value, element, options) {
+    var validator = this;
+    var selector = options[1];
+    var validOrNot = $(selector, element.form).filter(function() {
+            return validator.elementValue(this);
+        }).length >= options[0];
+
+    if(!$(element).data('being_validated')) {
+        var fields = $(selector, element.form);
+        fields.data('being_validated', true);
+        fields.valid();
+        fields.data('being_validated', false);
+    }
+    return validOrNot;
+})
+
 /*
  * Lets you say "either at least X inputs that match selector Y must be filled,
  * OR they must all be skipped (left blank)."
