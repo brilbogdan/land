@@ -15,11 +15,11 @@ gulp.task('less', function(){
 
 });
 
-
 gulp.task('watch', function(){
     return watch('./less/*.less', function(){
         gulp.start('less');
-    })
+    });
+
 });
 
 gulp.task('default',['less', 'watch']);

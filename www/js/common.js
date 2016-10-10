@@ -1,19 +1,26 @@
+//
+//PRELOADER
+//
 $(window).load(function () {
     $('.wrapper-preloader').animate({opacity:'0'},1000).queue(function (){$(this).css({display:'none'});});
     $('.group').click(function () {
         $(this).children('input').focus()
     })
 });
+
+
+
 jQuery.validator.setDefaults({
     debug: true,
     success: "valid"
 });
+
 $(document).ready(function () {
     //INIT
 
-
+    //
     //ACCORDION
-
+    //
     var ttl = $('.el-accordion__head'),
         dropdown = $('.accordion_dropdown');
 
@@ -25,11 +32,9 @@ $(document).ready(function () {
         $(this).next().slideToggle(200);
     });
 
-    //perfectScrollBar
-
-
+    //
     //COUNTDOWN
-
+    //
     var note = $('#note'),
         ts = new Date(2015, 9, 9),
         newYear = true;
@@ -63,12 +68,15 @@ $(document).ready(function () {
         }
     });
 
+    //
     //FANCYBOX
-
+    //
     $('.fancybox').fancybox();
 
-    //FORM STYLER
 
+     //
+    //FORM STYLER
+    //
     $('select').styler();
 
     $('.el-agree').change(function () {
@@ -80,7 +88,11 @@ $(document).ready(function () {
         }
     })
 
+
+
+    //
     //Full page
+    //
     var fixedBlock = $('.fixed-block');
     $('#fullpage').fullpage({
         menu: '#menu',
@@ -124,14 +136,18 @@ $(document).ready(function () {
         }
     });
 
-    //GRADIENT
 
+    //
+    //GRADIENT
+    //
     $('.txt-gradient').gradientText({
         colors: ['#ff6d00', '#ff8400', '#ff9f00']
     });
 
-    //VALIDATE
 
+    //
+    //VALIDATE формы авторизации
+    //
     $('.main-form').validate({
         rules:{
             password:{
@@ -163,6 +179,10 @@ $(document).ready(function () {
         $(this).siblings('.exam').hide();
     });
 
+
+    //
+    //Валидация формы регистрации
+    //
     $("#regForm").validate(
         {
             rules: {
@@ -211,6 +231,7 @@ $(document).ready(function () {
         $(this).hide();
     })
 
+
     var body = $('body'),
         btnChange = $('.btn-change'),
         themesArea = 1,
@@ -221,8 +242,9 @@ $(document).ready(function () {
         totalClickAdv,  // total click (xxx)
         allClickAdv; // all click (yyy)
 
+    //
     //BODY CHANGE
-
+    //
     $(btnChange).on('click',function (e) {
 
         e.preventDefault();
@@ -278,9 +300,10 @@ $(document).ready(function () {
         }
     });
 
+
+    //
     // SECTION PARTNER (CALCULATOR - webmaster);
-
-
+    //
     $('#themes-area').on('change',function () {
         themesArea = $(this).val();
         calc_webmaster();
@@ -292,7 +315,6 @@ $(document).ready(function () {
         $('.el-area').not($(this)).removeClass('active');
         calc_webmaster();
     });
-
 
 
     $('.bl-wrapper-calc-master .el-btn-total').on('click', function (e) {
@@ -334,8 +356,10 @@ $(document).ready(function () {
         $('.bl-wrapper-calc-master .el-btn-amount').text(Math.round(totalPrice) + " руб");
     };
 
-    // SECTION PARTNER (CALCULATOR - adv);
 
+    //
+    // SECTION PARTNER (CALCULATOR - adv);
+    //
     $('#geo').on('change',function () {
         geo = $(this).val(); //A
         calc_adv();
@@ -380,6 +404,10 @@ $(document).ready(function () {
         $(this).addClass('el-top');
 
     });
+
+    //
+    // вывод в footer рандомных контактов байеров
+    //
 
     var contact = [
         seva = {
@@ -431,12 +459,19 @@ $(document).ready(function () {
         });
     }();
 
+    //
+    //Открытие меню
+    //
    $('.hamburger').on('click', function () {
        $(this).toggleClass('checked');
        $('body').toggleClass('menu-active');
        $('html').toggleClass('html-hidden');
        $('.fix-content').toggleClass('onblock');
    })
+
+    //
+    // Плавный скроллинг от ссылки к элементу
+    //
     $('.main-menu a').on('click',function () {
         $('body').removeClass('menu-active');
         $('html').removeClass('html-hidden');
@@ -448,7 +483,6 @@ $(document).ready(function () {
         $('html').removeClass('html-hidden');
         $('.fix-content').removeClass('onblock');
     })
-
     $(function() {
         //Enable swiping...
         $(".wrapper-content-abl").swipe( { swipeStatus:pinch, allowPageScroll:"vertical"} );
